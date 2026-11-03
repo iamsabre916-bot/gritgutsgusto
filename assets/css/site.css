@@ -261,3 +261,17 @@ details[open] summary { border-bottom: 1px solid var(--line); }
 .article .source { margin-top: 2.4em; padding-top: 18px; border-top: 1px solid var(--line); font-size: 0.95rem; color: var(--muted); }
 .back { font-weight: 700; text-decoration: none; display: inline-block; margin-bottom: 18px; }
 @media (max-width: 1080px) and (min-width: 901px) { .nav ul { gap: 18px; } .nav a { font-size: 0.9rem; } }
+
+/* Certificates */
+.certs { display: grid; grid-template-columns: repeat(2, minmax(0, 320px)); gap: 28px; margin-top: 8px; }
+.cert { margin: 0; }
+.cert a.thumb { display: block; border: 1px solid var(--line); background: var(--white); padding: 8px; transition: border-color 0.15s ease; }
+.cert a.thumb:hover { border-color: var(--gold); }
+.cert img { width: 100%; height: auto; }
+.cert figcaption { margin-top: 12px; font-size: 0.95rem; }
+.cert figcaption strong { display: block; color: var(--maroon); font-family: var(--serif); font-size: 1.08rem; }
+.cert figcaption span { color: var(--muted); display: block; }
+.cert .verify { display: inline-block; margin-top: 8px; font-weight: 700; font-size: 0.92rem; text-decoration: none; }
+.cert .verify::after { content: " \2197"; }
+.cert-note { font-size: 0.88rem; color: var(--muted); margin-top: 22px; }
+@media (max-width: 600px) { .certs { grid-template-columns: 1fr; } }
