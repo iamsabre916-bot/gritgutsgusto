@@ -24,6 +24,7 @@ NAV = [
     ("advisory", "Advisory", "advisory.html"),
     ("about", "About", "about.html"),
     ("providers", "For training providers", "training-providers.html"),
+    ("notes", "Notes", "notes.html"),
 ]
 
 HEAD = """<!DOCTYPE html>
@@ -79,6 +80,7 @@ FOOT = """</main>
         <li><a href="advisory.html">Advisory services</a></li>
         <li><a href="about.html">About the Principal Advisor</a></li>
         <li><a href="training-providers.html">For training providers</a></li>
+        <li><a href="notes.html">Notes</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
