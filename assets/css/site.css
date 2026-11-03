@@ -300,3 +300,8 @@ details[open] summary { border-bottom: 1px solid var(--line); }
 .quotes-6 .quote { grid-column: span 2; }
 .quotes-6 .quote:nth-child(4) { grid-column: 2 / span 2; }
 @media (max-width: 900px) { .quotes-6 { grid-template-columns: 1fr; } .quotes-6 .quote, .quotes-6 .quote:nth-child(4) { grid-column: auto; } }
+.feature-video.wide-video { grid-template-columns: 1fr 1.1fr; }
+.feature-video.wide-video .embed { max-width: none; }
+.video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border: 1px solid var(--line); }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+@media (max-width: 900px) { .feature-video.wide-video { grid-template-columns: 1fr; } }
