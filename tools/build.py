@@ -11,6 +11,7 @@ Run from the repo root:  python3 tools/build.py
 It writes <name>.html files to the repo root, wrapped in the shared header
 and footer below. Edit the shared parts here, edit page content in pages/.
 """
+import hashlib
 import re
 from pathlib import Path
 
@@ -44,7 +45,7 @@ HEAD = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v={cssv}">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -118,6 +119,7 @@ def meta(src, key):
 
 
 def build():
+    cssv = hashlib.md5((ROOT / "assets/css/site.css").read_bytes()).hexdigest()[:8]
     for page in sorted((ROOT / "pages").glob("*.html")):
         src = page.read_text(encoding="utf-8")
         name = page.stem
@@ -132,7 +134,7 @@ def build():
         canonical = SITE + "/" + ("" if name == "index" else out_name)
         html = HEAD.format(
             title=meta(src, "title"), description=meta(src, "description"),
-            canonical=canonical, site=SITE, nav=nav,
+            canonical=canonical, site=SITE, nav=nav, cssv=cssv,
             contact_current=' aria-current="page"' if active == "contact" else "",
         ) + body + FOOT.format(year=YEAR)
         (ROOT / out_name).write_text(html, encoding="utf-8")
