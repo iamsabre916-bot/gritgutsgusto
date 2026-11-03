@@ -81,6 +81,7 @@ FOOT = """</main>
         <li><a href="advisory.html">Advisory services</a></li>
         <li><a href="about.html">About the Principal Advisor</a></li>
         <li><a href="training-providers.html">For training providers</a></li>
+        <li><a href="testimonials.html">What people say</a></li>
         <li><a href="notes.html">My Thoughts</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
