@@ -320,3 +320,6 @@ details[open] summary { border-bottom: 1px solid var(--line); }
 .news-meta { display: block; font-size: 0.85rem; color: var(--muted); margin: 6px 0 10px; text-transform: uppercase; letter-spacing: 0.06em; }
 .news-list p { margin: 0; font-size: 0.95rem; }
 @media (max-width: 760px) { .news-list { grid-template-columns: 1fr; } }
+
+.article figure.poster img { max-width: 480px; margin: 0 auto; display: block; }
+.article figure.poster figcaption { text-align: center; }
