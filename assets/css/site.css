@@ -100,7 +100,7 @@ p { margin: 0 0 1em; }
 .hero .eyebrow { color: var(--gold-light); }
 .hero p { color: #efe3e5; font-size: 1.18rem; max-width: 34em; }
 .hero-photo { border: 1px solid var(--gold); padding: 10px; max-width: 340px; justify-self: end; }
-.hero-photo img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+.hero-photo img { width: 100%; height: auto; aspect-ratio: 3/4; object-fit: cover; }
 .hero-photo figcaption { font-size: 0.85rem; color: var(--gold-light); margin-top: 10px; text-align: center; }
 
 .page-hero { background: var(--maroon); color: var(--white); padding: 72px 0 64px; border-bottom: 4px solid var(--gold); }
